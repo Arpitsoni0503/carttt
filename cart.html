@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to cart</title>
+  <style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    .abc{
+        display: flex;
+    }
+    #totalAmount{
+        width: 45%;
+        font-size: 98px;
+       margin-top: 80px;
+    transition: 0.3s ease-out;
+
+
+    }
+    #totalAmount:hover{
+        color: red;
+    }
+   .x{
+    color: white;
+    transition: 0.3s ease-out;
+    font-size: 30px;
+    padding: 35px;
+   }
+   h1{
+    color: white;
+    transition: 0.3s ease-out;
+
+   }
+   h1:hover{
+    color: red;
+   }
+   .x:hover{
+    color: red;
+   }
+  
+  </style>
+</head>
+
+<body>
+ <div class="abc">
+    <div id="w">
+        <header id="title">
+          <h1>HTML5/CSS3 Shopping Cart UI</h1>
+        </header>
+        <div id="page">
+          <table id="cart">
+            <thead>
+              <tr>
+                <th class="x first" onmouseover="color">Photo</th>
+                <th class="x third">Product</th>
+                <th class="x fourth">Line Total</th>
+                <th class="x fifth">&nbsp;Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+    
+              
+              <!-- checkout btn -->
+              <!-- <tr class="checkoutrow">
+                <td colspan="5" class="checkout"><button id="submitbtn">Checkout Now!</button></td>
+              </tr> -->
+    
+            </tbody>
+          </table>
+         
+        </div>
+      </div>
+      <div id="totalAmount">Total: $0.00</div>
+ </div>
+</body>
+
+<script>
+
+  let cartData = JSON.parse(localStorage.getItem("addTocart")) ?? [];
+  let tbody=document.querySelector("#tbody")
+
+
+  function showCartItem() {
+    tbody.innerHTML =""
+    cartData.map((v, i) => {
+      tbody.innerHTML+=`
+          <tr class="productitm">
+          
+            <td><img src=${v.thumbnail} class="thumb"></td>
+            <td> ${v.title} </td>
+            <td>$ ${v.price} </td>
+            <td><span class="remove" onclick="DeleteItem( ${i} )" ><img src="https://i.imgur.com/h1ldGRr.png" alt="X"></span></td>
+          </tr>
+      `
+    })
+  }
+
+  showCartItem()
+  calculateTotal();
+  function calculateTotal() {
+    let total = cartData.reduce((sum, item) => sum + item.price, 0);
+    document.getElementById("totalAmount").innerText = `Total: $${total.toFixed(2)}`;
+  }
+
+  function DeleteItem(myId){
+    cartData.splice(myId,1)
+
+    localStorage.setItem("addTocart", JSON.stringify(cartData));
+
+    showCartItem()
+  }
+
+
+</script>
+
+</html>

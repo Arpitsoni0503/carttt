@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+  
+  header{
+    max-width: 100%;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 10px 0px #f1efef;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+   
+    align-items: center;
+  }
+  body{
+    background-color: black;
+
+  }
+  nav{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul,li{
+    display: flex;
+    margin: 0px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color:white;
+    transition: 0.3s ease-in-out;
+  }
+  nav ul li:hover{
+    background-color: white;
+   color: red;
+   border-radius: 5px;
+  }
+  .left{
+    display: flex;
+    align-items: center;
+  }
+  .left img{
+    height: 70px;
+  }
+  .search{
+    width: 60%;
+  }
+  .search input{
+    padding: 8px 20px;
+    width: 100%;
+    margin: 0px 20px;
+    border-radius: 9px;
+    border: 1px solid red;
+    outline: red;
+  }
+  .left img{
+    width: 30%;
+  }
+  #cart{
+    background-color: black;
+    width: 70px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: -5px;
+  }
+  #cart i{
+    margin-left: 10px;
+  }
+  #cart:hover{
+    color: black;
+    background-color: white;
+  }
+  .banner{
+    max-width: 100%;
+    
+  }
+  .banner-container{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .container1{
+    margin-top: 3%;
+    flex-basis: 50%;
+   
+  }
+  .container1 img{
+    width: 100%;
+   
+  }
+  .container2{
+    flex-basis: 50%;
+  }
+  
+  .container2 h4{
+    display:inline-block;
+    padding: 5px 20px;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-radius: 2px;
+  }
+  .container2 h2{
+    font-size: 65px;
+    margin-top: 7px;
+    color: red;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+  }
+  .container2 h2:hover{
+    color: white;
+  }
+  .container2 h3{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .h5{
+    font-size: 39px;
+    color: white;
+    transition: 0.4s;
+  }
+  .container2 h5:hover{
+    color: red;
+  }
+  .container2 p{
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  .container2 button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color:red;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.2s ;
+  }
+  .container2 button:hover{
+    background-color: white;
+    color:red;
+   border-radius: 20px;
+   
+  }
+  .container2 h5{
+    font-size: 23px;
+    margin: 20px 0px;
+  }
+  .Category{
+    width:85%;
+  }
+  .Category ul{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+  }
+  .Category ul li{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: white;
+    transition: 0.2s;
+  }
+  .Category ul li:hover{
+    background-color: red;
+    color: white;
+   border-radius: 20px;
+  }
+  .all{
+    max-width: 1300px;
+    margin:25px auto;
+    font-size: 60px;
+    font-weight: bold;
+  
+    color: white;
+    transition: 0.3s;
+  }
+  .all:hover{
+    color: red;
+  }
+  .allproduct{
+    max-width: 1300px;
+    margin:10px auto;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 10px;
+   color: white;
+transition: 0.4s ease-in-out;
+  }
+
+  .box{
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    margin: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .box img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .box h4{
+    font-size: 20px;
+    margin: 5px 0px;
+  }
+  .box h5 ,h6{
+    font-size: 16px;
+    margin: 5px 0px;
+  }
+  .box span{
+    font-size: 16px;
+    display: block;
+  }
+  .box button{
+    padding: 10px;
+    background-color:red;
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    border: 1px solid white;
+    display: block;
+    transition: 0.3s ease-in-out;
+  
+  }
+  .box button:hover{
+    background-color:white;
+    color: red;
+    border-radius: 20px;
+  }
+  .box:hover{
+    background-color :red;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    
+  }
+  
+  .cart-section {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #ccc;
+    background-color: red;
+    color: white;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: red;
+    color: white;
+
+  }
+  
+  .cart-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
